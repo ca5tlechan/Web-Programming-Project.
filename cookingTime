@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조리 시간별 레시피피</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .food-grid {
+            display: grid;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .food-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+            border-radius: 3px;
+        }
+
+        .food-card p {
+            margin: 0;
+            font-weight: 500;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('#mobileMenu').toggleClass('show');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container"> <!-- 상단 헤더 -->
+        <header>
+            <div class="logo">
+                <a href="main.html"><img class="logo-image" src="icon-image/Logo.png" alt="잔쿡"></a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="재료를 넣어주세요..." />
+            </div>
+            <div class="icons">
+                <a href="/signup" title="회원가입"><img src="icon-image/014-add.png" alt="회원가입"></a>
+                <a href="/login" title="로그인"><img src="icon-image/015-user-1.png" alt="로그인"></a>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/login">로그인</a>
+                <a href="/signup">회원가입</a>
+                <a href="#">종류별 음식</a>
+                <a href="ingredients.html">재료로 검색</a>
+                <a href="#">초보용 음식</a>
+                <a href="cookingTime.html">조리 시간별</a>
+            </div>
+        </header>
+
+        <!-- 메뉴 바 -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">종류별 음식</a></li>
+                <li><a href="ingredients.html">재료로 검색</a></li>
+                <li><a href="#">초보용 음식</a></li>
+                <li><a href="cookingTime.html">조리 시간별</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>조리 시간별 음식 정렬</h1>
+
+            <h2>15분 이내</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="food-image/kimchi-rice.jpg" alt="김치볶음밥">
+                    <p>김치볶음밥</p>
+                </div>
+                <div class="food-card">
+                    <img src="food-image/egg-cake.png" alt="에그 토스트">
+                    <p>계란말이</p>
+                </div>
+                <div class="food-card">
+                    <img src="food-image/kimchi-rice.jpg" alt="김치볶음밥">
+                    <p>김치볶음밥</p>
+                </div>
+                <div class="food-card">
+                    <img src="food-image/kimchi-rice.jpg" alt="김치볶음밥">
+                    <p>김치볶음밥</p>
+                </div>
+                <div class="food-card">
+                    <img src="food-image/kimchi-rice.jpg" alt="김치볶음밥">
+                    <p>김치볶음밥</p>
+                </div>
+                <div class="food-card">
+                    <img src="food-image/egg-cake.png" alt="에그 토스트">
+                    <p>계란말이</p>
+                </div>
+                <div class="food-card">
+                    <img src="food-image/egg-cake.png" alt="에그 토스트">
+                    <p>계란말이</p>
+                </div>
+            </div>
+
+            <h2>30분 ~ 1시간</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="bulgogi.jpg" alt="불고기">
+                    <p>불고기</p>
+                </div>
+                <div class="food-card">
+                    <img src="jeyuk-bokkeum.jpg" alt="제육볶음">
+                    <p>제육볶음</p>
+                </div>
+                <div class="food-card">
+                    <img src="doenjang-jjigae.jpg" alt="된장찌개">
+                    <p>된장찌개</p>
+                </div>
+            </div>
+
+            <h2>1시간 이상</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="steak.jpg" alt="스테이크">
+                    <p>스테이크</p>
+                </div>
+                <div class="food-card">
+                    <img src="bossam.jpg" alt="보쌈">
+                    <p>보쌈</p>
+                </div>
+                <div class="food-card">
+                    <img src="galbijjim.jpg" alt="갈비찜">
+                    <p>갈비찜</p>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div>
+                        <h4>서비스</h4>
+                        <ul>
+                            <li>공지사항</li>
+                            <li>자주 묻는 질문</li>
+                            <li>계정 일시정지</li>
+                            <li>고객센터</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>회사</h4>
+                        <ul>
+                            <li>회사 소개</li>
+                            <li>채용</li>
+                            <li>기술 블로그</li>
+                            <li>블로그</li>
+                            <li>광고</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>문의</h4>
+                        <ul>
+                            <li>광고 문의</li>
+                            <li>인증 사업 문의</li>
+                            <li>마케팅 · PR</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>고객센터</h4>
+                        <ul>
+                            <li>전화: 031-249- (24시간 연중무휴)</li>
+                            <li>이메일(고객전용): support@jancook.com</li>
+                            <li>민원 접수</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p><strong>(주)잔쿡</strong></p>
+                    <p>사업자 등록번호: 104-98-01782 | 대표: 이동근</p>
+                    <p>주소: 경기 수원시 영통구 광교산로 154-42</p>
+                    <p>서비스 이용약관 | 개인정보 처리방침 | 마이데이터 서비스 이용약관</p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><img src="icon-image/001-facebook.png" alt="Facebook" /></a>
+                    <a href="#"><img src="icon-image/003-twitter.png" alt="Twitter" /></a>
+                    <a href="#"><img src="icon-image/002-instagram.png" alt="Instagram" /></a>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
