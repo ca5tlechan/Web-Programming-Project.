@@ -1,113 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-      <link rel="script" href="foodData.js" />
-      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <title>레시피 페이지</title>
-<script>
-        $(document).ready(function () {
-            $('.menu-toggle').click(function () {
-                $('#mobileMenu').toggleClass('show');
-            });
-        });
-</script>
-
 </head>
+
 <body>
-  
   <div class="container">
-  <header>
-    <div class="logo">
-        <a href="main.html"><img class ="logo-image" src="icon-image/Logo.png" alt="잔쿡"></a>
-    </div>
-    <div class="search-box">
-        <input type="text" placeholder="재료를 넣어주세요..."/>
-    </div>
-    <div class="icons">
-                <a href="/signup" title="회원가입"><img src="icon-image/014-add.png" alt="회원가입"></a>
-                <a href="/login" title="로그인"><img src="icon-image/015-user-1.png" alt="로그인"></a>
-            </div>
-            <button class="menu-toggle">☰</button>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="/login">로그인</a>
-                <a href="/signup">회원가입</a>
-                <a href="#">종류별 음식</a>
-                <a href="ingredients.html">재료로 검색</a>
-                <a href="#">초보용 음식</a>
-                <a href="cookingTime.html">조리 시간별</a>
-            </div>
-  </header>
+    <header>
+      <div class="logo">
+        <a href="main.html"><img class="logo-image" src="icon-image/Logo.png" alt="잔쿡"></a>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="재료를 넣어주세요..." />
+      </div>
+      <div class="icons">
+        <a href="/signup" title="회원가입"><img src="icon-image/014-add.png" alt="회원가입"></a>
+        <a href="/login" title="로그인"><img src="icon-image/015-user-1.png" alt="로그인"></a>
+      </div>
+      <button class="menu-toggle">☰</button>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/login">로그인</a>
+        <a href="/signup">회원가입</a>
+        <a href="#">종류별 음식</a>
+        <a href="ingredients.html">재료로 검색</a>
+        <a href="#">초보용 음식</a>
+        <a href="cookingTime.html">조리 시간별</a>
+      </div>
+    </header>
 
-  <nav>
-    <ul class="nav-menu">
+    <nav>
+      <ul class="nav-menu">
         <li><a href="#">종류별 음식</a></li>
-        <li><a href="#">재료로 검색</a></li>
+        <li><a href="ingredients.html">재료로 검색</a></li>
         <li><a href="#">초보용 음식</a></li>
-        <li><a href="#">조리 시간별</a></li>
-    </ul>
-</nav>
-
+        <li><a href="cookingTime.html">조리 시간별</a></li>
+      </ul>
+    </nav>
     <section class="step-section">
-    <div class="recipe-content">
-
-      <div class="left-box">
-        <div class="image-box">
-        <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube.com/embed/eIo2BaE6LxI?si=IUMhoDH_QMf7CS_O"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+      <div class="recipe-content">
+        <div class="left-box">
+          <div class="iframe-container">
+            <iframe width="560" height="250" src="https://www.youtube.com/embed/eIo2BaE6LxI?si=IUMhoDH_QMf7CS_O"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="info-box">
+            <strong>김치볶음밥</strong><br>
+            Ex) 맵기: 🌶🌶 / 조리시간: 15분 / 1~2인분 기준
+          </div>
         </div>
-  
-        </div>
-        <div class="info-box">
-          <strong>김치볶음밥</strong><br>
-          Ex) 맵기: 🌶🌶  / 조리시간: 15분 / 1~2인분 기준
-        </div>
-      </div>
 
-      <div class="right-box">
-        <div class="section-box">
-          <h3>필요한 재료</h3>
-        <ul>
-          <li>김치 200g</li>
-          <li>마요네즈 1스푼</li>
-          <li>간장 1스푼</li>
-          <li>설탕 0.5스푼 (신김치일 경우)</li>
-          <li>파 약간</li>
-          <li>양파 약간</li>
-          <li>공기밥 2인분</li>
-          <li>참치캔 1개 (선택)</li>
-          <li>식용유 적당량</li>
-          <li>참기름 1스푼</li>
-          <li>깨 약간</li>
-          <li>달걀 1개 (선택, 프라이용)</li>
-          <li>김가루 약간 (선택)</li>
-          <li>버터 1조각 (선택)</li>
-        </ul>
+        <div class="right-box">
+          <div class="section-box">
+            <h3>필요한 재료</h3>
+            <ul>
+              <li>김치 200g</li>
+              <li>마요네즈 1스푼</li>
+              <li>간장 1스푼</li>
+              <li>설탕 0.5스푼 (신김치일 경우)</li>
+              <li>파 약간</li>
+              <li>양파 약간</li>
+              <li>공기밥 2인분</li>
+              <li>참치캔 1개 (선택)</li>
+              <li>식용유 적당량</li>
+              <li>참기름 1스푼</li>
+              <li>깨 약간</li>
+              <li>달걀 1개 (선택, 프라이용)</li>
+              <li>김가루 약간 (선택)</li>
+              <li>버터 1조각 (선택)</li>
+            </ul>
 
 
-          <h3>필요한 요리도구 (권장)</h3>
-          <ul>
-            <li>후라이팬</li>
-            <li>주걱</li>
-            <li>그릇</li>
-          </ul>
+            <h3>필요한 요리도구 (권장)</h3>
+            <ul>
+              <li>후라이팬</li>
+              <li>주걱</li>
+              <li>그릇</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
 
       <div class="step-box">
         <div class="step-text">
-          <p>영상 자막/상세 정보</p><hr><br>
+          <p>영상 자막/상세 정보</p>
+          <hr><br>
           <ol>
             <li>김치와 파나 양파를 잘게 썰어서 준비합니다.</li><br>
             <li>마요네즈 1스푼과 간장 1스푼, 신김치일 경우 설탕을 살짝 넣어 김치를 양념해줍니다.</li><br>
@@ -135,67 +118,68 @@
             <li>간을 심심하게 하고 싶다면 간장 대신 소금만 사용해도 됩니다.</li><br>
             <li>김치볶음밥과 함께 먹을 계란국이나 미소된장국을 준비해도 좋아요.</li><br>
           </ol>
-          
+
         </div>
-        
+
       </div>
     </section>
-  </div>  
+  </div>
 
 
-<footer class="footer">
-        <div class="footer-container">
-            <div class="footer-top">
-                <div>
-                    <h4>서비스</h4>
-                    <ul>
-                        <li>공지사항</li>
-                        <li>자주 묻는 질문</li>
-                        <li>계정 일시정지</li>
-                        <li>고객센터</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>회사</h4>
-                    <ul>
-                        <li>회사 소개</li>
-                        <li>채용</li>
-                        <li>기술 블로그</li>
-                        <li>블로그</li>
-                        <li>광고</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>문의</h4>
-                    <ul>
-                        <li>광고 문의</li>
-                        <li>인증 사업 문의</li>
-                        <li>마케팅 · PR</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>고객센터</h4>
-                    <ul>
-                        <li>전화: 031-249- (24시간 연중무휴)</li>
-                        <li>이메일(고객전용): support@jancook.com</li>
-                        <li>민원 접수</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-info">
-                <p><strong>(주)잔쿡</strong></p>
-                <p>사업자 등록번호: 104-98-01782 | 대표: 이동근</p>
-                <p>주소: 경기 수원시 영통구 광교산로 154-42</p>
-                <p>서비스 이용약관 | 개인정보 처리방침 | 마이데이터 서비스 이용약관</p>
-            </div>
-
-            <div class="footer-social">
-                <a href="#"><img src="icon-image/001-facebook.png" alt="Facebook" /></a>
-                <a href="#"><img src="icon-image/003-twitter.png" alt="Twitter" /></a>
-                <a href="#"><img src="icon-image/002-instagram.png" alt="Instagram" /></a>
-            </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div>
+          <h4>서비스</h4>
+          <ul>
+            <li>공지사항</li>
+            <li>자주 묻는 질문</li>
+            <li>계정 일시정지</li>
+            <li>고객센터</li>
+          </ul>
         </div>
-    </footer>
+        <div>
+          <h4>회사</h4>
+          <ul>
+            <li>회사 소개</li>
+            <li>채용</li>
+            <li>기술 블로그</li>
+            <li>블로그</li>
+            <li>광고</li>
+          </ul>
+        </div>
+        <div>
+          <h4>문의</h4>
+          <ul>
+            <li>광고 문의</li>
+            <li>인증 사업 문의</li>
+            <li>마케팅 · PR</li>
+          </ul>
+        </div>
+        <div>
+          <h4>고객센터</h4>
+          <ul>
+            <li>전화: 031-249- (24시간 연중무휴)</li>
+            <li>이메일(고객전용): support@jancook.com</li>
+            <li>민원 접수</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-info">
+        <p><strong>(주)잔쿡</strong></p>
+        <p>사업자 등록번호: 104-98-01782 | 대표: 이동근</p>
+        <p>주소: 경기 수원시 영통구 광교산로 154-42</p>
+        <p>서비스 이용약관 | 개인정보 처리방침 | 마이데이터 서비스 이용약관</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><img src="icon-image/001-facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="icon-image/003-twitter.png" alt="Twitter" /></a>
+        <a href="#"><img src="icon-image/002-instagram.png" alt="Instagram" /></a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
