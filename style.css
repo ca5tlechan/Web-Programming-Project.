@@ -1,3 +1,4 @@
+/* 공통 초기화 */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -483,7 +484,7 @@ nav {
     }
 
     .category-icons button {
-        flex: 0 0 65px;
+        flex: 0 0 50px;
         height: 100px;
         border: none;
         background-color: #FDFCFA;
@@ -532,6 +533,23 @@ nav {
         height: auto;
         max-height: none;
         overflow-y: visible;
+    }
+    
+    .search-result {
+        grid-template-columns: repeat(2, 1fr); /* 두 칸 레이아웃 */
+        gap: 1rem;
+    }
+
+    .food-card {
+        padding: 0.5rem;
+    }
+
+    .food-card img {
+        height: 120px;
+    }
+
+    .food-card p {
+        font-size: 0.9rem;
     }
 
 }
